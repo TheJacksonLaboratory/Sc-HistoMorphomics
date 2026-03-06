@@ -25,7 +25,14 @@ conda install dask -y
 pip install opencv-python
 conda install -c conda-forge python-javabridge -y
 
-##Install supporting libraries
+## Install supporting libraries
 pip install zarr
 pip install geojson
 pip install imagecodecs
+
+## Installation
+
+To install the environment required for this tool:
+
+```bash
+# ...installation commands here...
