@@ -3,6 +3,12 @@ sc‑HistoMorphomics, a scalable framework for profiling nuclear morphology in w
 
 
 # Installation
+
+
+## Installation
+
+To install the environment required for this tool:
+
 Create and activate environment
 conda create -n stardist python=3.8 -y
 conda activate stardist
@@ -29,10 +35,4 @@ conda install -c conda-forge python-javabridge -y
 pip install zarr
 pip install geojson
 pip install imagecodecs
-
-## Installation
-
-To install the environment required for this tool:
-
-```bash
 # ...installation commands here...
