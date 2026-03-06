@@ -2,9 +2,6 @@
 sc‑HistoMorphomics, a scalable framework for profiling nuclear morphology in whole‑slide H&amp;E images and correlating these measurements with spatial transcriptomics data.
 
 
-# Installation
-
-
 ## Installation
 
 To install the environment required for this tool:
@@ -35,4 +32,5 @@ conda install -c conda-forge python-javabridge -y
 pip install zarr
 pip install geojson
 pip install imagecodecs
+```bash
 # ...installation commands here...
