@@ -16,6 +16,9 @@ pip install --upgrade pip
 ## Install TensorFlow
 pip install tensorflow
 
+## Install stardist
+pip install stardist
+
 ## Install wxPython (needed for CellProfiler GUI)
 wget https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-20.04/wxPython-4.1.0-cp38-cp38-linux_x86_64.whl
 pip install wxPython-4.1.0-cp38-cp38-linux_x86_64.whl
