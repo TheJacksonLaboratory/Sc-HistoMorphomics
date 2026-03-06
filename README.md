@@ -7,13 +7,13 @@ Create and activate environment
 conda create -n stardist python=3.8 -y
 conda activate stardist
 
-Upgrade pip
+## Upgrade pip
 pip install --upgrade pip
 
-Install TensorFlow
+## Install TensorFlow
 pip install tensorflow
 
-Install wxPython (needed for CellProfiler GUI)
+## Install wxPython (needed for CellProfiler GUI)
 wget https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-20.04/wxPython-4.1.0-cp38-cp38-linux_x86_64.whl
 pip install wxPython-4.1.0-cp38-cp38-linux_x86_64.whl
 
