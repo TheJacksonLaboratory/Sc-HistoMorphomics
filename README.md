@@ -27,8 +27,6 @@ pip install git+https://github.com/CellProfiler/CellProfiler.git@v4.2.5
 conda install dask -y
 pip install opencv-python
 conda install -c conda-forge python-javabridge -y
-
-## Install supporting libraries
 pip install zarr
 pip install geojson
 pip install imagecodecs
