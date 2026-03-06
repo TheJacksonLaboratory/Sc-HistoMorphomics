@@ -7,8 +7,8 @@ sc‑HistoMorphomics, a scalable framework for profiling nuclear morphology in w
 # To install the environment required for this tool:
 
 Create and activate environment
-conda create -n stardist python=3.8 -y
-conda activate stardist
+conda create -n Sc-HistoMorphomics python=3.8 -y
+conda activate Sc-HistoMorphomics
 
 ## Upgrade pip
 pip install --upgrade pip
