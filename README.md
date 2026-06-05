@@ -1,7 +1,12 @@
 # Sc-HistoMorphomics
 Sc‑HistoMorphomics is a scalable framework for profiling nuclear morphology in whole‑slide H&amp;E images and correlating these measurements with spatial transcriptomics data.
 
+## Workflow
 
+![sc-HistoMorphomics workflow](docs/figures/workflow.png)
+
+[Download high-resolution workflow PDF](figures/workflow.pdf)
+``
 ## Installation
 ```bash
 # To install the environment required for this tool:
