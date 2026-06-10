@@ -4,7 +4,7 @@ Sc‑HistoMorphomics is a scalable framework for profiling nuclear morphology in
 ![sc-HistoMorphomics workflow](figures/workflow.png)
 
 
-``
+
 ## Installation
 ```bash
 # To install the environment required for this tool:
