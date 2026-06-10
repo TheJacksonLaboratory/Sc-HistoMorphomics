@@ -3,7 +3,7 @@ Sc‑HistoMorphomics is a scalable framework for profiling nuclear morphology in
 
 ## Workflow
 
-![sc-HistoMorphomics workflow](docs/figures/workflow.png)
+![sc-HistoMorphomics workflow](figures/workflow.png)
 
 
 ``
