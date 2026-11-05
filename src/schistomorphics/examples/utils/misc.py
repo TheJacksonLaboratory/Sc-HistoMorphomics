@@ -545,6 +545,7 @@ def clean_up_morphs_no_st_data(
     output_prefix: str,
     chunks: int,
     shape,
+    tag=""
 ):
     """
     Aggregate chunk-wise CellProfiler outputs into a single-cell table
@@ -660,11 +661,11 @@ def clean_up_morphs_no_st_data(
     
 
     
-    All.to_csv(output_prefix + "_Measurements2.csv", index=False)
+    All.to_csv(output_prefix + "_Measurements"+tag+".csv", index=False)
 
-    imwrite(output_prefix + "_hemotoxylin.tif", skimage.util.img_as_int(Hemotoxylin))   
-    imwrite(output_prefix+"_cytoplasm.tif", skimage.util.img_as_int(cyto))
-    imwrite(output_prefix+"_eosin.tif", skimage.util.img_as_int(Eosin))
+    imwrite(output_prefix +tag+ "_hemotoxylin.tif", skimage.util.img_as_int(Hemotoxylin))   
+    imwrite(output_prefix+tag+"_cytoplasm.tif", skimage.util.img_as_int(cyto))
+    imwrite(output_prefix+tag+"_eosin.tif", skimage.util.img_as_int(Eosin))
     
     return All2, Hemotoxylin, Eosin, cyto
 
@@ -674,7 +675,8 @@ def compute_or_load_morphology(
     labels: np.ndarray,
     res_dir: str,
     chunk_size: int = 4000,
-    force=False
+    force=False,
+    tag=""
 ):
     """
     Compute CellProfiler morphology features if they do not exist.
@@ -685,7 +687,7 @@ def compute_or_load_morphology(
     Hematoxylin, Eosin, Cytoplasm : np.ndarray
         Derived H&E channels and cytoplasm mask.
     """
-    if not os.path.isfile(f"{res_dir}_Measurements.csv") or force:
+    if not os.path.isfile(f"{res_dir}_Measurements{tag}.csv") or force:
         print("CellProfiler measurements not found. Computing...")
 
         features, _ =compute_cp_dask(
@@ -703,10 +705,10 @@ def compute_or_load_morphology(
         print(f" Morph features shape is : {Morph.shape}")
     else:
         print("Loading existing CellProfiler measurements...")
-        Morph = pd.read_csv(f"{res_dir}_Measurements.csv")
-        Hematoxylin = imread(f"{res_dir}_hemotoxylin.tif")
-        Eosin = imread(f"{res_dir}_eosin.tif")
-        Cytoplasm = imread(f"{res_dir}_cytoplasm.tif")
+        Morph = pd.read_csv(f"{res_dir}_Measurements{tag}.csv")
+        Hematoxylin = imread(f"{res_dir}{tag}_hemotoxylin.tif")
+        Eosin = imread(f"{res_dir}{tag}_eosin.tif")
+        Cytoplasm = imread(f"{res_dir}{tag}_cytoplasm.tif")
     return Morph, Hematoxylin, Eosin, Cytoplasm
 
 
